@@ -1,0 +1,27 @@
+
+boolean debounce(int Pin, boolean last)
+{
+ boolean current = digitalRead(Pin);
+    if(current != last)
+      {
+        delay(5);
+        current = digitalRead(Pin);
+      } 
+  return(current);    
+}
+
+
+
+boolean currentButton = LOW;
+boolean lastButton = LOW;
+
+
+
+
+
+
+
+
+
+if(debounce(Pin, lastButton) == HIGH && lastButton == LOW)
+lastButton = debounce(Pin, lastButton);
