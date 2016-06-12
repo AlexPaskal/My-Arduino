@@ -1,0 +1,8 @@
+ int tmS = analogRead(tmp);
+  
+ float volt = (tmS/1024.0)*5.0;
+ float TMP = (volt - .5)*100;
+
+ float Celsius = TMP;
+ float Farengeit = ((Celsius * 9)/5) + 32;
+ float Kelvin = (Celsius + 273.15);
